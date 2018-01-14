@@ -97,25 +97,7 @@ resultDirectory = pwd;
        
 % nResultFiles = nResultFiles + 1;
   
- 
-%% 5. Net irradiance to Algae habitat and/or to ocean
-   
-        [M N Z] = size(AllNet);
-        
-     NetBottom = nan(M,Z);
-  
-       for k = 1 : X   % for each observation
-           NetBottom(:,k) = AllDown(:,end - 1,k); 
-       end 
 
-    
-          filenamepref = 'NetBottom';
-              filename = horzcat(filenamepref,'.csv');
-               csvwrite(filename,NetBottom);             
-       
-
-
- nResultFiles = nResultFiles + 1;
 %% 7. Aggreement matrix
 
    
